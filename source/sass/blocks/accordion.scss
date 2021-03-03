@@ -1,0 +1,133 @@
+.accordion__item {
+  border-bottom: 1px solid $lite-grey;
+}
+
+.accordion__title-wrapper {
+  padding: 15px 15px 15px 58px;
+  position: relative;
+  transition: all 0.3s linear;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 44px;
+    height: 44px;
+    top: 6px;
+    left: -6px;
+  }
+
+  &--fine::before {
+    background: url(../img/icon_fine.svg) no-repeat;
+  }
+
+  &--court::before {
+    background: url(../img/icon_court.svg) no-repeat;
+  }
+
+  &--taxes::before {
+    background: url(../img/icon_taxes.svg) no-repeat;
+  }
+
+  &--services::before {
+    background: url(../img/icon_services.svg) no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: url(../img/arrow.svg) no-repeat;
+    top: 23px;
+    right: 0;
+    transition: all 0.5s ease;
+  }
+
+  .accordion__content-wrapper--opened > &::after {
+    transform: rotate(-180deg);
+  }
+}
+
+.accordion__title {
+  @include zeroing;
+  display: inline-block;
+  color: $blue;
+  border-bottom: 1px solid $lite-grey;
+  font-family: $font-semibold;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s linear;
+}
+
+.accordion__text {
+  @include zeroing;
+  margin-top: 12px;
+
+  &--last {
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+}
+
+.accordion__text-important {
+  display: block;
+  color: $red;
+  font-family: $font-bold;
+  text-transform: uppercase;
+}
+
+.accordion__image {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .accordion__item-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .accordion__title-wrapper {
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .accordion__title {
+    margin-bottom: 10px;
+    font-family: $font-semibold;
+    font-size: 25px;
+    line-height: 32px;
+    color: $black;
+    border: none;
+  }
+
+  .accordion__content {
+    overflow: visible;
+  }
+
+  .accordion__text--last {
+    margin-top: 32px;
+  }
+
+  .accordion__image {
+    display: block;
+    margin-left: 40px;
+
+    &--left {
+      order: -1;
+      margin-left: 0;
+      margin-right: 40px;
+    }
+  }
+}

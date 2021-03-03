@@ -1,0 +1,27 @@
+.navigation {
+  padding: 20px;
+}
+
+.navigation__title {
+  @include zeroing;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-family: $font-bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  &--first {
+    margin-top: 0;
+  }
+}
+
+.navigation__link {
+  display: block;
+  @include zeroing;
+  font-size: 16px;
+  line-height: 22px;
+  color: $blue;
+  text-decoration: underline;
+  margin-bottom: 18px;
+}

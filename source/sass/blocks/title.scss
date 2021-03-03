@@ -1,0 +1,17 @@
+.title {
+  font-family: $font-semibold;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+
+  &--white {
+    color: $white;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    font-size: 36px;
+    line-height: 49px;
+  }
+}

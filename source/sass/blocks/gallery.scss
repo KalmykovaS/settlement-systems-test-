@@ -1,0 +1,34 @@
+.gallery {
+  @include list;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  text-align: center;
+  padding: 22px 5px 0;
+}
+
+.gallery__item {
+  flex-basis: 140px;
+  min-height: 168px;
+}
+.gallery__link {
+  color: $black;
+}
+
+.gallery__text {
+  @include zeroing;
+  font-family: $font-semibold;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media (min-width: $desktop-width) {
+  .gallery {
+    padding: 25px 10px 35px;
+  }
+
+  .gallery__text {
+    margin-top: 8px;
+  }
+}

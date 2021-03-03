@@ -1,0 +1,15 @@
+@mixin zeroing {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button {
+  border: none;
+  cursor: pointer;
+}

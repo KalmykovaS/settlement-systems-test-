@@ -1,0 +1,50 @@
+.modal {
+  position: relative;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.modal__container {
+  position: fixed;
+  z-index: 100;
+  background-color: $white;
+  top: 50px;
+  right: 15px;
+  padding: 24px 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  &:before {
+    position: absolute;
+    content: "";
+    border: 10px solid transparent;
+    border-bottom: 10px solid $white;
+    top: -18px;
+    right: 18px;
+  }
+}
+
+.modal__text {
+  @include zeroing;
+}
+
+.modal__phone {
+  display: block;
+  font-family: $font-semibold;
+  font-size: 28px;
+  line-height: 38px;
+  color: $black;
+}
+
+.modal__link {
+  display: block;
+  font-family: $font-semibold;
+  color: $blue;
+  text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+.partners {
+  padding-top: 28px;
+}
+
+.partners__title {
+  @include zeroing;
+}
+
+@media (min-width: $desktop-width) {
+  .partners {
+    padding-top: 60px;
+  }
+
+  .partners__title {
+    margin-bottom: 25px;
+  }
+}

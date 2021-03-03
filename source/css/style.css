@@ -458,8 +458,8 @@ img {
 .accordion__content {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear; }
+  -webkit-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear; }
 
 .accordion__text {
   margin: 0;
@@ -505,7 +505,9 @@ img {
     margin-top: 32px; }
   .accordion__image {
     display: block;
-    margin-left: 40px; }
+    margin-left: 40px;
+    width: 320px;
+    height: 320px }
     .accordion__image--left {
       -webkit-box-ordinal-group: 0;
           -ms-flex-order: -1;

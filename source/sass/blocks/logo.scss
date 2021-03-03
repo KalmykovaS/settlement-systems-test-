@@ -1,0 +1,17 @@
+.logo {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    padding-right: 70px;
+    padding-left: 35px;
+    text-align: center;
+  }
+
+  .logo__site-logo {
+    width: 295px;
+    height: 44px;
+  }
+}

@@ -1,0 +1,68 @@
+.pay {
+  padding-top: 28px;
+}
+
+.pay__title {
+  @include zeroing;
+}
+
+.pay__text--first {
+  display: block;
+}
+
+.pay__text--second {
+  display: none;
+}
+
+.pay__wrapper {
+  margin-top: 15px;
+}
+
+.pay__list {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .pay {
+    padding-top: 60px;
+  }
+
+  .pay__title {
+    margin-bottom: 10px;
+  }
+
+  .pay__text--second {
+    display: block;
+  }
+  .pay__text--first {
+    display: none;
+  }
+
+  .pay__list {
+    @include list;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .pay__item {
+    padding: 5px 15px;
+    white-space: nowrap;
+
+    &--last {
+      font-size: 19px;
+      line-height: 26px;
+    }
+  }
+
+  .pay__link {
+    color: $blue;
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid $lite-grey;
+  }
+}
